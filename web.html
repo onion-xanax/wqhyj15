@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@wqhyj15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="gif-column">
+            <img src="one.gif" alt="GIF анимация" class="gif-image" id="gifImage">
+        </div>
+        <div class="player-column">
+            <div class="player-horizontal">
+                <canvas id="visualizer" width="300" height="300"></canvas>
+                <div class="info-panel">
+                    <div class="song-title">Монеточка - Твое имя</div>
+                    <div class="progress-container">
+                        <input type="range" id="progress" value="0" step="0.001">
+                    </div>
+                    <div class="controls-row">
+                        <button id="play-pause" class="icon-btn">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path id="play-icon" d="M8 5v14l11-7z" fill="#b34180" display="block" />
+                                <path id="pause-icon" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="#b34180" display="none" />
+                            </svg>
+                        </button>
+                        <button id="download" class="icon-btn">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="#b34180" />
+                            </svg>
+                        </button>
+                        <div class="volume-horizontal">
+                            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://t.me/wqhyj15" target="_blank" class="social-btn">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.05-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.04-.48-.82-.27-1.47-.42-1.42-.88.03-.24.36-.48.99-.74 3.9-1.7 6.5-2.82 7.8-3.37 3.72-1.57 4.49-1.84 4.99-1.85.11 0 .36.03.52.17.14.12.18.28.2.41-.02.12-.02.33 0 .51z" fill="#b34180" />
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://www.tiktok.com/@wqhyj15?_r=1&_t=ZN-93tb7xCHINb" target="_blank" class="social-btn">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.88-3.58 3.17-5.91 3.04-1.87-.11-3.64-.98-4.87-2.41-1.46-1.71-2.12-4.07-1.71-6.26.41-2.2 1.88-4.14 3.84-5.21 1.46-.8 3.17-1.07 4.82-.75-.03 1.48-.06 2.96-.08 4.44-.99-.35-2.15-.36-3.15.13-.98.48-1.76 1.33-2.09 2.32-.38 1.14-.08 2.43.62 3.35.62.83 1.63 1.37 2.67 1.26 1.22-.13 2.24-1.07 2.6-2.24.18-.61.24-1.25.23-1.88.03-3.33.02-6.67.02-10z" fill="#b34180" />
+                    </svg>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <audio id="audio-player" src="music.mp3" preload="auto"></audio>
+    <script src="web.js"></script>
+</body>
+</html>
